@@ -10,7 +10,7 @@ async function run() {
     }
 
     var body: any = core.getInput('body');
-    body = body ? body : {
+    body = body ? body : JSON.stringify({
       "msgtype": "link",
       "link": {
         "text": "test",
@@ -18,7 +18,7 @@ async function run() {
         "picUrl": "",
         "messageUrl": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI"
       }
-    }
+    })
 
     if (!body) {
       core.setFailed('post body is required!');
@@ -31,7 +31,7 @@ async function run() {
     console.log(`token: ${token}`);
     core.debug(`token: ${token}`);
     console.log(`body: ${body}`);
-    console.log(`body json: ${JSON.stringify(body)}`);
+    console.log(`body json: ${body}`);
     core.debug(`body: ${body}`);
 
     const req = https.request({
@@ -64,7 +64,7 @@ async function run() {
       console.error(err);
     });
 
-    req.write(JSON.stringify(body));
+    req.write(body);
     req.end();
   } catch (error) {
     core.setFailed(error.message);
