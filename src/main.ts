@@ -13,7 +13,7 @@ async function run() {
     if (!body) {
       core.setFailed('post body is required!');
     }
-    console.log(body)
+
     const req = https.request({
       hostname: `oapi.dingtalk.com`,
       port: 443,
@@ -23,7 +23,7 @@ async function run() {
         'Content-Type': "application/json; charset=utf-8"
       }
     });
-    console.log(JSON.stringify(body))
+
     req.write(JSON.stringify(body));
     req.on('error', function (err) {
       core.setFailed('post message is failed!');
