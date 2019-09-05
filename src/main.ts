@@ -28,7 +28,10 @@ async function run() {
       return;
     }
 
+    console.log(`token: ${token}`);
     core.debug(`token: ${token}`);
+    console.log(`body: ${body}`);
+    console.log(`body json: ${JSON.stringify(body)}`);
     core.debug(`body: ${body}`);
 
     const req = https.request({
