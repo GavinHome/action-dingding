@@ -1,10 +1,24 @@
-name: 'Node 12 Template Action'
-description: 'Get started with Node actions'
-author: 'GitHub'
+# name: 'Node 12 Template Action'
+# description: 'Get started with Node actions'
+# author: 'GitHub'
+# inputs:
+#   myInput:
+#     description: 'Input to use'
+#     default: 'world'
+# runs:
+#   using: 'node12'
+#   main: 'lib/main.js'
+
+name: 'Action-DingDing-Notify'
+description: 'Send dingding message'
+author: 'yangxiaomin'
 inputs:
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  token:
+    description: 'DingDing bot access-token'
+    required: true
+  body:
+    description: 'Post Body to send'
+    required: true
 runs:
   using: 'node12'
   main: 'lib/main.js'
