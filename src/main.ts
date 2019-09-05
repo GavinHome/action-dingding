@@ -3,20 +3,20 @@ import * as https from 'https';
 
 async function run() {
   try {
-    //const token = core.getInput('token');
-    const token = 'f8e6693c61f3a970efe789133f5dd4b691ab9a6f0f9058022bf450057a523713'
+    var token = core.getInput('token');
+    token = token ? token : 'f8e6693c61f3a970efe789133f5dd4b691ab9a6f0f9058022bf450057a523713'
     if (!token) {
       core.setFailed('dingding token is required!');
     }
 
-    //const body = core.getInput('body');
-    const body = {
+    var body: any = core.getInput('body');
+    body = body ? body : {
       "msgtype": "link",
       "link": {
-          "text": "test",
-          "title": "test",
-          "picUrl": "",
-          "messageUrl": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI"
+        "text": "test",
+        "title": "test",
+        "picUrl": "",
+        "messageUrl": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI"
       }
     }
 
@@ -24,9 +24,12 @@ async function run() {
       core.setFailed('post body is required!');
     }
 
-    if(!token || !body) {
+    if (!token || !body) {
       return;
     }
+
+    core.debug(`token: ${token}`);
+    core.debug(`body: ${body}`);
 
     const req = https.request({
       protocol: 'https:',
