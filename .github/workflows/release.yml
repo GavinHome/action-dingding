@@ -16,7 +16,7 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         body: "publishing releases/v1.0"
-        commit: "release"
+        commit: "releases/v1.0"
         tag: "v1.0"
         token: ${{ secrets.GITHUB_TOKEN }}
    
