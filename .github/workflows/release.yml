@@ -1,9 +1,9 @@
 name: release
 
-on: 
-  push:
-    branches:
-    - releases/v1.0
+# on: 
+#   push:
+#     branches:
+#     - releases/v1.0
 
 jobs:
   build:
