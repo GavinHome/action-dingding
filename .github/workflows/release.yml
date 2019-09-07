@@ -1,0 +1,22 @@
+name: release
+
+on: 
+  push:
+    branches:
+    - releases/v1
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    
+    - uses: ncipollo/release-action@v1
+      with:
+        body: "publishing releases/v1"
+        commit: "release"
+        tag: "v1"
+        token: ${{ secrets.GITHUB_TOKEN }}
+   
