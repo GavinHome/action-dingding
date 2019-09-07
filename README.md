@@ -9,14 +9,14 @@ You must provide:
 - `token`: Usually you'll want to set this to `${{ secrets.DING_TOKEN }}`.
 - `body`: Put any kind of message body. 
 
-See the walkthrough located [dingding](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq), support into `body` and `token` field.
+See the walkthrough located [dingding](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq), support into `body` and `token` fields.
 
 
 ## Getting Started
 
 This usage assumes you want to send dingding message only.
-Firt, set up DingDing group [bot](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq).
-Second, This is a common use case as you will want to send dingding message.
+- First, set up DingDing group [bot](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq).
+- Second, This is a common use case as you will want to send DingDing message.
 
 Simple example:
 
