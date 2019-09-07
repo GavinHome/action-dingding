@@ -1,8 +1,8 @@
 {
-  "name": "node12-template-action",
-  "version": "1.0.2",
+  "name": "send-dingding-message-action",
+  "version": "1.0",
   "private": true,
-  "description": "Node 12 template action",
+  "description": "Send dingding message action",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -10,12 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-template.git"
+    "url": "git+https://github.com/GavinHome/action-dingding.git"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "setup",
+    "dingding"
   ],
   "author": "yangxiaomin",
   "license": "MIT",
