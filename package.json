@@ -1,6 +1,6 @@
 {
   "name": "send-dingding-message-action",
-  "version": "1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Send dingding message action",
   "main": "lib/main.js",
@@ -15,8 +15,9 @@
   "keywords": [
     "actions",
     "node",
-    "setup",
-    "dingding"
+    "typescript",
+    "dingding",
+    "message"
   ],
   "author": "yangxiaomin",
   "license": "MIT",
