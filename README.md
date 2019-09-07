@@ -22,7 +22,7 @@ Simple example:
 
 ```yaml
 - name: Send dingding notify
-  uses: GavinHome/action-dingding@v1
+  uses: GavinHome/action-dingding@v1.0
   with:
     token: ${{ secrets.DING_TOKEN }}
     body: |

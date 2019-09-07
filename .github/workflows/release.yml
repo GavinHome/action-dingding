@@ -3,7 +3,7 @@ name: release
 # on: 
 #   push:
 #     branches:
-#     - releases/v1
+#     - releases/v1.0
 
 jobs:
   build:
@@ -15,8 +15,8 @@ jobs:
     
     - uses: ncipollo/release-action@v1
       with:
-        body: "publishing releases/v1"
+        body: "publishing releases/v1.0"
         commit: "release"
-        tag: "v1"
+        tag: "v1.0"
         token: ${{ secrets.GITHUB_TOKEN }}
    
