@@ -1,6 +1,9 @@
 name: 'Action-DingDing-Notify'
 description: 'Send dingding message'
 author: 'yangxiaomin'
+branding:
+  icon: 'message-circle'
+  color: 'red'
 inputs:
   token:
     description: 'DingDing bot access-token'
